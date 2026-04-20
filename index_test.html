@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Мой первый сайт на GitHub Pages</title>
+    <style>
+        /* Простой красивый дизайн */
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            line-height: 1.5;
+            background: #faf9f8;
+            color: #1a1a1a;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #2d7a4b, #1e5a3a);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 1.8rem;
+            margin-bottom: 1.8rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border: 1px solid #eaeaea;
+        }
+        .code-block {
+            background: #1e1e2f;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 16px;
+            overflow-x: auto;
+            font-family: monospace;
+            font-size: 0.85rem;
+        }
+        button {
+            background: #2d7a4b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        button:hover {
+            background: #1e5a3a;
+            transform: scale(1.02);
+        }
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.85rem;
+            color: #6c757d;
+            border-top: 1px solid #ddd;
+            padding-top: 1.5rem;
+        }
+    </style>
+
+    <!-- ============================================= -->
+    <!-- СЮДА ВСТАВЬТЕ КОД ВАШЕГО ПИКСЕЛЯ (любой)       -->
+    <!-- ============================================= -->
+    <!-- Например, пиксель ВКонтакте (замените ID) -->
+    <script type="text/javascript">
+        // Удалите или замените этот блок на код вашего пикселя
+        console.log("Пример заглушки пикселя — замените на свой код");
+        // Пример для VK:
+        // !function(){var t=document.createElement("script");
+        // t.type="text/javascript",t.async=!0,
+        // t.src="https://vk.com/js/api/openapi.js?169",
+        // t.onload=function(){VK.Retargeting.Init("ВАШ_ID"),VK.Retargeting.Hit()},
+        // document.head.appendChild(t)}();
+    </script>
+    <!-- ============================================= -->
+</head>
+<body>
+
+<header>
+    <h1>✨ Мой сайт на GitHub Pages</h1>
+    <p>Пиксель уже работает, если вы вставили свой код</p>
+</header>
+
+<div class="card">
+    <h2>✅ Пиксель установлен</h2>
+    <p>Этот сайт создан для установки рекламного или аналитического пикселя. Вы можете проверить его работу через инструменты разработчика (F12 → Network).</p>
+    <p>Пример кнопки для теста событий (если пиксель поддерживает клики):</p>
+    <button id="testButton">📊 Нажми для теста</button>
+</div>
+
+<div class="card">
+    <h2>📌 Как заменить пиксель</h2>
+    <p>Откройте файл <code>index.html</code> в своём репозитории и замените код между комментариями:</p>
+    <div class="code-block">
+        &lt;!-- СЮДА ВСТАВЬТЕ КОД ВАШЕГО ПИКСЕЛЯ --&gt;<br>
+        &lt;script&gt;<br>
+        &nbsp;&nbsp;// ваш код пикселя<br>
+        &lt;/script&gt;
+    </div>
+</div>
+
+<footer>
+    Сайт работает на GitHub Pages &nbsp;|&nbsp; 
+    Ваш адрес: <strong>https://<span id="domainPlaceholder">вашлогин.github.io</span></strong>
+    <script>
+        // Автоматически подставит текущий домен
+        document.getElementById('domainPlaceholder').innerText = window.location.hostname;
+    </script>
+</footer>
+
+<script>
+    // Простой скрипт для демонстрации события (не влияет на пиксель)
+    const btn = document.getElementById('testButton');
+    if (btn) {
+        btn.addEventListener('click', () => {
+            alert('Клик зафиксирован. Если пиксель настроен на события — он сработал.');
+            // Можно добавить кастомный вызов пикселя, если нужно:
+            // Например, fbq('track', 'Lead');
+        });
+    }
+</script>
+
+</body>
+</html>
